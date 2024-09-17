@@ -18,6 +18,7 @@ module.exports = {
       },
     ],
   },
+  experimental: { appDir: true },
   async redirects() {
     return [
       {
