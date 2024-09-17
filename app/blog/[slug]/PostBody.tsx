@@ -49,33 +49,33 @@ const PostBody: FC<PostBodyProps> = ({ post }) => {
     images.forEach((image) => image.setAttribute('data-fancybox', 'gallery'));
   }, []);
 
-  const content = unified()
-    .use(rehypeParse, { fragment: true })
-    .use(() => {
-      return (tree: any) => {
-        visit(tree, 'element', (node) => {
-          if (node.tagName === 'h2') {
-            const id = parameterize(
-              node.children[0].value
-                ? node.children[0].value
-                : node.children[0].children[0].value
-            );
-            node.properties.id = id;
+  // const content = unified()
+  //   .use(rehypeParse, { fragment: true })
+  //   .use(() => {
+  //     return (tree: any) => {
+  //       visit(tree, 'element', (node) => {
+  //         if (node.tagName === 'h2') {
+  //           const id = parameterize(
+  //             node.children[0].value
+  //               ? node.children[0].value
+  //               : node.children[0].children[0].value
+  //           );
+  //           node.properties.id = id;
 
-            toc.push({
-              id,
-              title: node.children[0].value
-                ? node.children[0].value
-                : node.children[0].children[0].value,
-            });
-          }
-        });
-      };
-    })
-    //@ts-ignore
-    .use(rehypeStringify)
-    .processSync(post.richText.html)
-    .toString();
+  //           toc.push({
+  //             id,
+  //             title: node.children[0].value
+  //               ? node.children[0].value
+  //               : node.children[0].children[0].value,
+  //           });
+  //         }
+  //       });
+  //     };
+  //   })
+  //   //@ts-ignore
+  //   .use(rehypeStringify)
+  //   .processSync(post.richText.html)
+  //   .toString();
 
   return (
     <section className='px-4 pt-8 lg:pb-20'>
@@ -136,7 +136,7 @@ const PostBody: FC<PostBodyProps> = ({ post }) => {
                        prose-pre:p-0 prose-table:inline-block prose-table:min-w-full prose-table:table-fixed prose-table:overflow-hidden
                        prose-table:overflow-x-auto prose-td:min-w-[120px]
                        prose-img:cursor-pointer prose-img:rounded-lg md:prose-td:min-w-0 lg:mt-8 lg:px-8'
-            dangerouslySetInnerHTML={{ __html: content }}
+            dangerouslySetInnerHTML={{ __html: 'content' }}
           />
         </FancyboxWrapper>
       </div>
