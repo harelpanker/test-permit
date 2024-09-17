@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.permit.io/
+
+# Sitemaps
+Sitemap: https://www.permit.io/sitemap.xml

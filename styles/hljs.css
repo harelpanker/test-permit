@@ -1,0 +1,53 @@
+.hljs {
+  background-color: #2a211f !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  /* word-wrap: break-word !important; */
+}
+code.hljs {
+  background-color: #2a211f !important;
+}
+code {
+  font-size: 14px !important;
+  /* word-wrap: break-word !important; */
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+  /* white-space: pre-wrap !important; */
+  color: #cba393 !important;
+}
+.hljs-string {
+  color: #ffbc86 !important;
+}
+.hljs-symbol {
+  color: #52a9ff !important;
+}
+.hljs-literal,
+.hljs-variable.constant_ {
+  color: #c393ff !important;
+}
+.hljs-keyword {
+  color: #ff8b3e !important;
+}
+.hljs-comment {
+  color: #a18072 !important;
+}
+.hljs-subst {
+  color: #c393ff !important;
+}
+.hljs-type {
+  color: #52a9ff !important;
+}
+.is_overflow_none {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+}
+
+.panels .hljs-string {
+  white-space: nowrap !important;
+}
+
+.hljs-variable.constant_ {
+  color: #00ba77 !important;
+}

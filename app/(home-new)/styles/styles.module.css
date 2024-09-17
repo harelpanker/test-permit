@@ -1,0 +1,15 @@
+.img__w {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.active_image {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

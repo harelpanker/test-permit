@@ -1,0 +1,13 @@
+.section-recommendation-slider .splide__pagination.splide__pagination--ltr {
+  position: relative;
+  padding-top: 0.8rem;
+  gap: 0.4rem;
+}
+.section-recommendation-slider .splide__pagination__page {
+  background-color: #ffcca7;
+  transition: background-color 0.3s ease;
+}
+.section-recommendation-slider .splide__pagination__page.is-active {
+  background-color: #451e11;
+  transform: scale(1.2);
+}

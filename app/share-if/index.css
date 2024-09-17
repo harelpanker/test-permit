@@ -1,0 +1,53 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-poppins);
+  line-height: 1.3 !important;
+}
+
+.marquee-wrapper {
+  height: 992px; /* The height of one image */
+  overflow: hidden;
+  position: relative;
+  width: 766px;
+}
+
+.marquee {
+  position: absolute;
+  top: 0;
+  animation: marquee 80s linear infinite;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes marquee {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -200%; /* Moves the images up by two times their height */
+  }
+}
+
+.horizontal-marquee-wrapper {
+  width: 100%; /* Adjust to the container width */
+  overflow: hidden;
+  position: relative;
+  height: 333px; /* Height of the image */
+}
+
+.horizontal-marquee {
+  display: flex;
+  width: calc(2142px * 2); /* Total width of both images */
+  animation: horizontal-marquee 60s linear infinite;
+}
+
+@keyframes horizontal-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move left by half of the total width */
+  }
+}
